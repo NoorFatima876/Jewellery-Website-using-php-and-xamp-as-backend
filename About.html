@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Jewelry Collection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+```
+/* Navigation */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #D47A77;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #D47A77;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  color: #fff;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  transition: transform 5s ease;
+}
+.hero:hover img {
+  transform: scale(1.05);
+}
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* Section Titles */
+h2 {
+  color: #D47A77;
+  margin: 50px 0 15px;
+  text-align: center;
+}
+p {
+  max-width: 900px;
+  margin: 10px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+.about img {
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.6s ease;
+}
+.about img:hover {
+  transform: scale(1.03);
+}
+.about-text {
+  flex: 1 1 400px;
+  text-align: left;
+  animation: fadeInUp 1.5s ease;
+}
+.about-text p {
+  text-align: justify;
+}
+
+/* Mission Section */
+.mission {
+  background: #D47A77;
+  color: white;
+  padding: 60px 20px;
+  margin-top: 40px;
+  transition: background 0.5s ease;
+}
+.mission:hover {
+  background: #b55f5b;
+}
+.mission h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Values Section */
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px auto;
+  max-width: 1100px;
+}
+.card {
+  flex: 1 1 300px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+.card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+.card h3 {
+  color: #D47A77;
+  margin-bottom: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+  background: #fafafa;
+  padding: 50px 20px;
+}
+.gallery h2 {
+  color: #D47A77;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 25px;
+  margin-top: 50px;
+}
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+
+  <nav>
+    <div class="logo">Jewelry Collection</div>
+    <ul>
+       <li><a href="Jewellery1.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#values">Values</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+
+  <div class="hero">
+    <img src="images/jew.jfif" alt="Jewelry Banner">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- About Section -->
+
+  <section id="about">
+    <h2>Who We Are</h2>
+    <div class="about">
+      <img src="images/j.jfif" alt="Our Story">
+      <div class="about-text">
+        <p>
+          At <b>Jewelry Collection</b>, we believe jewelry is not just an accessory—it’s a symbol of love, beauty, and tradition.
+          Established in 1990, we’ve been crafting timeless designs that capture the essence of sophistication and elegance.
+        </p>
+        <p>
+          Our team of artisans combines classic techniques with modern creativity to design pieces that resonate with every occasion.
+          From weddings to everyday wear, every item reflects luxury, authenticity, and grace.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+
+  <section id="mission" class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      To bring sparkle and elegance into everyday life through timeless, high-quality, and ethically sourced jewelry.
+      We aim to make luxury accessible, sustainable, and meaningful for everyone.
+    </p>
+  </section>
+
+  <!-- Values Section -->
+
+  <section id="values">
+    <h2>Our Values</h2>
+    <div class="values">
+      <div class="card">
+        <img src="images/ring.jpeg" alt="Craftsmanship">
+        <h3>Craftsmanship</h3>
+        <p>Each piece is created by skilled artisans with precision and care to ensure timeless beauty.</p>
+      </div>
+      <div class="card">
+        <img src="images/Indian.jfif" alt="Ethics">
+        <h3>Ethics</h3>
+        <p>We use responsibly sourced materials and promote fair labor practices across our supply chain.</p>
+      </div>
+      <div class="card">
+        <img src="images/download3.jfif" alt="Quality">
+        <h3>Quality</h3>
+        <p>Our jewelry is designed to last for generations, maintaining its shine and durability over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+
+  <section id="gallery" class="gallery">
+    <h2>Our Creations</h2>
+    <div class="gallery-grid">
+      <img src="images/download (11).jfif" alt="Jewelry 1">
+      <img src="images/ringSet.jpg" alt="Jewelry 2">
+      <img src="images/Indian.jfif" alt="Jewelry 3">
+      <img src="images/rhinestoneEaring.jpeg" alt="Jewelry 4">
+        <img src="images/o.jfif" alt="Jewelry 5">
+        <img src="images/download (8).jfif" alt="Jewelry 5">
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <p>&copy; 2025 Jewelry Collection | Designed with elegance and passion.</p>
+  </footer>
+<script src="script1.js"></script>
+
+
+
+</body>
+</html>

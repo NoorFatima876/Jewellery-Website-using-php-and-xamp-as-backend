@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Pearls & Petals</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: url("images/jew.jfif") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: #D47A77;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      padding: 25px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.88);
+      margin-top: 80px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      background: #D47A77;
+      padding: 12px;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      margin-top: 15px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="Jewellery1.html">Home</a>
+  <a href="About.html">About Us</a>
+  <a href="contact1.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h2>Product Booking Form</h2>
+
+  <form id="bookingForm">
+
+    <input type="text" id="b_name" placeholder="Full Name" required>
+    <input type="email" id="b_email" placeholder="Email Address" required>
+    <input type="text" id="b_phone" placeholder="Phone Number" required>
+    <textarea id="b_address" rows="3" placeholder="Complete Address" required></textarea>
+
+    <select id="country" onchange="loadCities()" required>
+      <option value="" disabled selected>Select Country</option>
+      <option value="Pakistan">Pakistan</option>
+      <option value="UAE">UAE</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="UK">United Kingdom</option>
+    </select>
+
+    <select id="city" required>
+      <option value="" disabled selected>Select City</option>
+    </select>
+
+    <select id="product" onchange="updatePrice()" required>
+      <option value="" disabled selected>Select Product</option>
+      <option value="Gold Necklace" data-price="45000">Gold Necklace</option>
+      <option value="Diamond Ring" data-price="78000">Diamond Ring</option>
+      <option value="Pearl Earrings" data-price="22000">Pearl Earrings</option>
+      <option value="Bracelet Set" data-price="18000">Bracelet Set</option>
+    </select>
+
+    <div>
+      <b>Total Price:</b> <span id="priceText">Rs. 0</span>
+    </div>
+
+    <!--  name added -->
+    <input type="hidden" id="price" name="price">
+
+    <button type="button" onclick="sendBooking()">Confirm Booking</button>
+  </form>
+</div>
+
+<script>
+const cityOptions = {
+  Pakistan: ["Lahore","Karachi","Faisalabad","Islamabad"],
+  UAE: ["Dubai","Abu Dhabi"],
+  "Saudi Arabia": ["Riyadh","Jeddah"],
+  UK: ["London","Manchester"]
+};
+
+function loadCities() {
+  const city = document.getElementById("city");
+  city.innerHTML = `<option disabled selected>Select City</option>`;
+  cityOptions[country.value].forEach(c => {
+    city.innerHTML += `<option value="${c}">${c}</option>`;
+  });
+}
+
+function updatePrice() {
+  const p = product.options[product.selectedIndex].dataset.price;
+  price.value = p;
+  priceText.innerText = "Rs. " + p;
+}
+</script>
+
+<script src="script1.js"></script>
+</body>
+</html>

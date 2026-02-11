@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearls & Petals - Jewelry Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      text-align: center;
+      background: #D47A77;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      background: #D47A77;
+      color: white;
+      font-size: 1.05rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #E9A4A2;
+    }
+/* ================= HOVER EFFECTS ================= */
+
+.hero img {
+  transition: transform 5s ease;
+}
+
+.hero:hover img {
+  transform: scale(1.05);
+}
+
+.product {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.product img {
+  transition: transform 0.6s ease;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+    .hero {
+      position: relative;
+      height: 65vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 50px 0 20px;
+      color: #D47A77;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      background: #D47A77;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #E9A4A2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #f8f8f8;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 992px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .products { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Pearls & Petals</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="About.html">About Us</a></li>
+    <li><a href="contact1.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <img src="images/jew.jfif">
+  <div class="hero-content">
+    <h1>Pearls & Petals</h1>
+    <p>Elegance. Grace. Timeless Beauty.</p>
+  </div>
+</section>
+
+<h2 id="collection">Our Featured Collection</h2>
+
+<div class="products">
+
+  <div class="product">
+    <img src="images/ring.jpeg">
+    <div class="info">
+      <h3>Crystal Ring</h3>
+      <p>PKR 16,000</p>
+      <button onclick="window.location.href='booking1.html?product=Crystal Ring&price=16000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/platinum.jpeg">
+    <div class="info">
+      <h3>Platinum Ring</h3>
+      <p>PKR 42,000</p>
+      <button onclick="window.location.href='booking1.html?product=Platinum Ring&price=42000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/necklace.jpg">
+    <div class="info">
+      <h3>Gemstone Necklace</h3>
+      <p>PKR 33,000</p>
+      <button onclick="window.location.href='booking1.html?product=Gemstone Necklace&price=33000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/download.jfif">
+    <div class="info">
+      <h3>Bracelet Set</h3>
+      <p>PKR 22,000</p>
+      <button onclick="window.location.href='booking1.html?product=Bracelet Set&price=22000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/rhinestoneEaring.jpeg">
+    <div class="info">
+      <h3>Rhinestone Earrings</h3>
+      <p>PKR 13,500</p>
+      <button onclick="window.location.href='booking1.html?product=Rhinestone Earrings&price=13500'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/Royall.jfif">
+    <div class="info">
+      <h3>Royal Bridal Set</h3>
+      <p>PKR 126,000</p>
+      <button onclick="window.location.href='booking1.html?product=Royal Bridal Set&price=26000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/download7.jfif">
+    <div class="info">
+      <h3>Diamond Pendant Set</h3>
+      <p>PKR 139,000</p>
+      <button onclick="window.location.href='booking1.html?product=Diamond Pendant Set&price=139000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/bangles.jpg">
+    <div class="info">
+      <h3>Gold Bangles</h3>
+      <p>PKR 555,000</p>
+      <button onclick="window.location.href='booking1.html?product=Gold Bangles&price=555000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/bow.jpeg">
+    <div class="info">
+      <h3>Bow Earrings</h3>
+      <p>PKR 3,000</p>
+      <button onclick="window.location.href='booking1.html?product=Bow Earrings&price=3000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/Indian.jfif">
+    <div class="info">
+      <h3>Bridal Set</h3>
+      <p>PKR 139,000</p>
+      <button onclick="window.location.href='booking1.html?product=Bridal Set&price=139000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/silver.jpg">
+    <div class="info">
+      <h3>Silver Bangles</h3>
+      <p>PKR 15,000</p>
+      <button onclick="window.location.href='booking1.html?product=Silver Bangles&price=15000'">Book Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/download3.jfif">
+    <div class="info">
+      <h3>Pearl Earrings</h3>
+      <p>PKR 30,000</p>
+      <button onclick="window.location.href='booking1.html?product=Pearl Earrings&price=30000'">Book Now</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Contact us: <b>info@pearlsandpetals.com</b> | +92 300 1234567</p>
+  <p>&copy; 2025 Pearls & Petals</p>
+</footer>
+
+</body>
+</html>
