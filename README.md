@@ -1,0 +1,2 @@
+# Jewellery-Website-using-php-and-xamp-as-backend
+Pearls &amp; Petals is a jewellery management and booking website designed to showcase jewellery collections and allow customers to place bookings online. The system includes frontend pages for users and backend PHP scripts connected to a MySQL database for handling bookings and form data. This project is developed for academic and learning purposes.
